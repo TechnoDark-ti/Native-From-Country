@@ -1,38 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://c3drx5feg2qlt"]
 
-[ext_resource path="res://tilemaps/casa1.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://bav3o1ixawa5l" path="res://tilemaps/casa1.png" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+[sub_resource type="RectangleShape2D" id="1"]
 
 [node name="casas" type="Node"]
 
-[node name="1" type="Sprite2D" parent="." index="0"]
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(-500, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("1")
+region_rect = Rect2(0, 0, 96, 128)
 
-position = Vector2( -500, 0 )
-scale = Vector2( 3, 3 )
-texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 96, 128 )
-_sections_unfolded = [ "Transform3D" ]
+[node name="1" type="StaticBody2D" parent="1"]
+position = Vector2(-1.43051e-05, 0.223609)
+scale = Vector2(1.50245, 2.01957)
 
-[node name="1" type="StaticBody2D" parent="1" index="0"]
-
-position = Vector2( -1.43051e-005, 0.223609 )
-scale = Vector2( 1.50245, 2.01957 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="1" type="CollisionShape2D" parent="1/1" index="0"]
-
-position = Vector2( 0.14883, -1.34331 )
-scale = Vector2( 3.21488, 3.04924 )
-shape = SubResource( 1 )
-
-
+[node name="1" type="CollisionShape2D" parent="1/1"]
+position = Vector2(0.14883, -1.34331)
+scale = Vector2(3.21488, 3.04924)
+shape = SubResource("1")
