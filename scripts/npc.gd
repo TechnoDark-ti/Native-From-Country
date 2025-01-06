@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const gravity = 10
 const speed = 70
@@ -15,7 +15,10 @@ func _ready():
 func _physics_process(delta):
 	velocity.x = speed * direction
 	$icon/AnimationPlayer.play("andar")
-	velocity = move_and_slide(velocity, floor_ )
+	set_velocity(velocity)
+	set_up_direction(floor_)
+	move_and_slide()
+	velocity = velocity
 
 	if is_on_wall():
 		direction = direction * -1

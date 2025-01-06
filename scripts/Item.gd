@@ -9,7 +9,7 @@ func _init(itemName, itemTexture, itemSlot, itemValue):
 	name = itemName;
 	self.itemName = itemName;
 	texture = itemTexture;
-	hint_tooltip = "Name: %s\n\nValue: %d" % [itemName, itemValue];
+	tooltip_text = "Name: %s\n\nValue: %d" % [itemName, itemValue];
 	self.itemSlot = itemSlot;
 	mouse_filter = Control.MOUSE_FILTER_PASS;
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND;
@@ -21,7 +21,7 @@ func pickItem():
 	pass
 	
 func putItem():
-	rect_global_position = Vector2(0, 0);
+	global_position = Vector2(0, 0);
 	mouse_filter = Control.MOUSE_FILTER_PASS;
 	picked = false;
 	pass

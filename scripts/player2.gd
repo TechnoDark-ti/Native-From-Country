@@ -1,9 +1,9 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 var speed = 150
 var cont = 0
 var num = 2
-onready var sprite = $lekshads
+@onready var sprite = $lekshads
 var movedir = Vector2(0, 0)
 func _physics_process(delta):	
 	controls_loop()
@@ -110,4 +110,6 @@ func controls_loop():
 #-----------------------------------------------------------	
 func movement_loop():
 	var motion = movedir.normalized() * speed
-	move_and_slide(motion, Vector2(0, 0))
+	set_velocity(motion)
+	set_up_direction(Vector2(0, 0))
+	move_and_slide()

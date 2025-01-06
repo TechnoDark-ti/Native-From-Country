@@ -5,18 +5,18 @@
 
 [node name="jogar" instance=ExtResource( 1 )]
 
-margin_left = 311.0
-margin_top = 63.0
-margin_right = 1351.0
-margin_bottom = 114.0
+offset_left = 311.0
+offset_top = 63.0
+offset_right = 1351.0
+offset_bottom = 114.0
 script = ExtResource( 2 )
 Scene_to_load = "res://mapa.tscn"
 
 [node name="Label" parent="." index="0"]
 
-margin_top = 9.0
-margin_right = 168.0
-margin_bottom = 48.0
+offset_top = 9.0
+offset_right = 168.0
+offset_bottom = 48.0
 text = "Jogar"
 
 

@@ -57,10 +57,10 @@ func _ready():
 
 func _input(event):
 	if holdingItem != null && holdingItem.picked:
-		holdingItem.rect_global_position = Vector2(event.position.x, event.position.y);
+		holdingItem.global_position = Vector2(event.position.x, event.position.y);
 
 func _gui_input(event):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		var clickedSlot;
 		for slot in slotList:
 			var slotMousePos = slot.get_local_mouse_position();
@@ -83,5 +83,5 @@ func _gui_input(event):
 		elif clickedSlot.item != null:
 			holdingItem = clickedSlot.item;
 			clickedSlot.pickItem();
-			holdingItem.rect_global_position = Vector2(event.position.x, event.position.y);
+			holdingItem.global_position = Vector2(event.position.x, event.position.y);
 	pass

@@ -1,3 +1,3 @@
 extends Button
 
-export(String) var Scene_to_load
+@export var Scene_to_load: String

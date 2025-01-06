@@ -1,8 +1,8 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
-export var speed = 6.00
-export var tileSize = 32.00
-onready var sprite = $sprite
+@export var speed = 6.00
+@export var tileSize = 32.00
+@onready var sprite = $sprite
 
 var Iframes = 0
 var initpos = Vector2()
