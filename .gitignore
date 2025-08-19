@@ -1,4 +1,6 @@
-/.import/
+*.import
+*.db
+*.
 
 
 export_presets.cfg
