@@ -1,29 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bquc7nxdnbmaq"]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource type="FontFile" uid="uid://p6mlhotstwn7" path="res://fonts/arial-black-bold.ttf" id="1"]
+[ext_resource path="res://fonts/arial-black-bold.ttf" type="DynamicFontData" id=1]
 
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
+[sub_resource type="DynamicFont" id=1]
+size = 40
+use_mipmaps = true
+font_data = ExtResource( 1 )
 
 [node name="MenuButton" type="Button"]
-offset_right = 1040.0
-offset_bottom = 51.0
+margin_right = 1040.0
+margin_bottom = 51.0
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 14.0
-theme_override_colors/font_shadow_color = Color(1, 0.592157, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = SubResource("1")
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 1 )
 text = "Label"
 uppercase = true
